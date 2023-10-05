@@ -7,6 +7,8 @@ Sistema de clientes e usuários em Laravel.
 * Laravel
 * PHP
 * MySQL
+* Vite
+* Tailwind
 
 ## ✒️ Autor
 
