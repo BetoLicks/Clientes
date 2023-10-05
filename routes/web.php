@@ -29,7 +29,14 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     //-> USUÁRIOS...
-    Route::get('/users-index',[UserController::class,'index'])->name(name: 'user.index');
+    Route::get('/users-index',[UserController::class,'index'])->name(name: 'users.index');
+
+    //-> EDIÇÃO DO USUÁRIO...
+    Route::get('/user-edit/{id}',[UserController::class,'edit'])->name(name: 'user.edit');
+
+    Route::put('/edit-update/{id}',[UserController::class,'update'])->name(name: 'user.update');
+
+
 });
 
 require __DIR__.'/auth.php';
