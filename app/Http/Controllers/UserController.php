@@ -20,6 +20,7 @@ class UserController extends Controller
     }
 
     public function update(Request $id){
-        return 'update';
+        User::findOrFail($id->$id)->update($id->all());
+        return redirect()->route('user.index');
     }
 }
